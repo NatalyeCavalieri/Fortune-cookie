@@ -1,0 +1,166 @@
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root{
+  --font-h1: 'Montserrat', sans-serif;
+  --font-base: 'DM Sans', sans-serif;
+  --font-frase: 'Dancing Script', cursive;
+
+  --color-base:#34355B;
+  --color-frasebutton: #fff;
+
+  font-size: 62.5%;
+}
+
+body{
+  background: linear-gradient(45deg, #190361 0%, #B0F 100%);
+  width: 100vw;
+  height: 100vh;
+}
+
+.hide{
+  display: none;
+}
+
+
+#container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+height: 100vh;
+  
+}
+
+.content{
+width: 42.8rem;
+padding: 4.8rem 6.4rem 6.4rem;
+border-radius: 5px;
+background: rgb(210,201,219);
+background: radial-gradient(circle, rgba(210,201,219,1) 0%, rgba(212,204,220,1) 21%, rgba(219,214,224,0.3085609243697479) 100%);
+}
+
+.content h1{
+  font-family:var(--font-h1);
+  color: var(--color-base);
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.9rem;
+  text-align:center;
+  margin-bottom: 1.4rem;
+}
+
+
+.content p{
+  font-family: var(--font-base);
+  color: var(--color-base);
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+  text-align: center;
+  margin-bottom: 2.0rem;
+}
+
+/*screen2*/
+
+
+.screen2 #container{
+  padding: 4.8rem 6.55rem;
+  animation:rotate-scale-up .65s linear both;
+
+}
+
+@keyframes rotate-scale-up{
+  0%{
+    transform:scale(1) rotateZ(0)
+  }
+  50%{
+    transform:scale(2) rotateZ(180deg)
+  }
+  100%{
+    transform:scale(1) rotateZ(360deg)
+  }}
+
+  .screen2 .content{
+    border-radius: 2.0rem;
+  }
+
+.fortune-message{
+  padding: 1.0rem;
+  background: rgb(103, 82, 121);
+  box-shadow: 2rem 2rem 2rem 0 rgba(85, 85, 85, 0.50);
+  height: 15rem;
+  width: 29.3rem;
+  border-radius: 1.0rem;
+  
+}
+
+.screen2 h1{
+  margin-bottom: 3.0rem;
+}
+
+
+.fortune-message p{
+  font-family: var(--font-frase);
+  color: var(--color-frasebutton);
+  font-size: 2.8rem;
+  line-height: 2.9rem;
+  margin-bottom: 1.7rem;
+  text-align: center;
+}
+
+.button-container{
+  display: flex;
+  justify-content: center;
+}
+
+.fortune-button{
+  font-family: var(--font-base);
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1.6rem;
+  border-radius: .7rem;
+  background: #FF9500;
+  color: var(--color-frasebutton);
+  border: none;
+  justify-content: center;
+}
+
+.fortune-button:hover{
+  background: #4d320c;
+  cursor: pointer;
+  transition: all 400ms ease-in-out;
+}
+
+
+
+@media(max-width:500px){
+  .content{
+  width: 35.0rem;
+  padding: 3.0rem 3.0rem 1.0rem;
+}
+
+.content h1{
+  font-size: 2.0rem;
+}
+
+.fortune-message p{
+  font-size: 2.0rem;
+}
+
+.fortune-message{
+width: 25rem;
+height: 13.5rem;
+margin: auto;
+}
+
+.button-container{
+  margin-bottom: 2.0rem;
+}
+
+}
